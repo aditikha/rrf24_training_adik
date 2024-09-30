@@ -12,3 +12,5 @@ Feel free to update this README as you progress through the sessions and customi
 
 Remember this is what you will share with your peer at the end of the training for review. 
 
+
+Training: For the rrf 24
