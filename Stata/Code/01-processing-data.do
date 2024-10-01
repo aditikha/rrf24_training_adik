@@ -23,7 +23,7 @@
 *------------------------------------------------------------------------------- 							
 	
 	* IDs
-	local ids 		hhid key vid enid 
+	local ids hhid key vid enid 
 	
 	* Unit: household
 	local hh_vars 	floor roof walls water enegry rel_head female_head hh_size n_child_5 n_child_17 n_adult n_elder food_cons nonfood_cons farm ar_farm ar_farm_unit crop crop_other crop_prp livestock_now livestock_before drought_flood crop_damage trust_mem trust_lead assoc health submissionday duration
@@ -116,16 +116,16 @@
 
 	preserve 
 
-		keep ???
+		keep `mem_vars' `ids'
 
 		* tidy: reshape tp hh-mem level 
-		reshape ???
+		reshape long `reshape_mem', i(`ids') j(member)
 		
 		* clean variable names 
-		rename ???
+		rename *_ *
 		
 		* drop missings 
-		drop if mi(???)
+		drop if mi(gender)
 		
 		* Cleaning using iecodebook
 		// recode the non-responses to extended missing
