@@ -11,7 +11,7 @@
 	
 	* Add file paths to DataWork folder and the Github folder for RRF2024
 	if "`c(username)'" == "ajay" {
-        *global onedrive "/Users/ajay/Library/CloudStorage/OneDrive-Personal/DataWork"
+       global onedrive "/Users/ajay/Library/CloudStorage/OneDrive-Personal/DataWork"
 		global github 	"/Users/ajay/Downloads/github_rrf/rrf24_training_adik"
     }
 	
@@ -37,6 +37,7 @@
 	* Run do files 
 	* Switch to 0/1 to not-run/run do-files 
 	if (0) do "${code}/01-processing-data.do"
-
+    if (0) do "$code/02-constructing-data.do"
+	if (1) do "$code/03-analyzing-data.do"
 
 * End of do-file!	
